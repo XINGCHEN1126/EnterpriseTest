@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="short icon" href="Resource/icon.png">
+    <link rel="stylesheet" href="style.css">
+    <title>郭星晨</title>
+</head>
+    <style>
+        .bg_img{
+          width:100%;
+        }
+        .exter_div{
+            position:relative;
+        }
+        .inner_div{
+          left:50%;
+            top:50%;
+            width:66px;
+            height:76px;
+            margin-left: -33px;
+            margin-top:-60px;
+            position:absolute;
+            text-align: center;
+        }
+        .inner_div  button{
+            background: rgb(32,131,204);
+            width:66px;
+            height:20px;
+        }
+        .MD_bottom_div{
+            width:100%;
+
+        }
+        .MD_bottom_inner_div{
+            width:90%;
+            background: white;
+
+            /*文字水平居中 height 与line-height 相同 */
+            height: 50px;
+            line-height: 50px;
+
+            /* 内部小div水平居中*/
+            margin: 10px auto;
+
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+
+        }
+        .MD_left_img{
+            float: left;
+            margin-left: 10px;
+            margin-right: 20px;
+            margin-top: 15px;
+        }
+        .MD_right_img{
+            float: right;
+            margin-right: 10px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <span>我的小滴</span>
+
+</header>
+<div class="exter_div">
+    <img class="bg_img" src="Resource/banner5.png" alt="">
+    <div class="inner_div">
+        <img  class="head_img" src="Resource/head.png" alt="">
+        <span id="M_userName">华杉科技</span>
+        <script>
+           document.getElementById("M_userName") .innerHTML=window.localStorage.getItem("userName");
+
+        </script>
+        <button>退出登录</button>
+        <script>
+            var btn =document.querySelector("#MD_btn");
+            btn.onclick =function(){
+                window.localStorage.removeItem("userName");
+                location.href="Login.html";
+            }
+        </script>
+    </div>
+</div>
+
+<div class="MD_bottom_div">
+    <div class="MD_bottom_inner_div">
+        <img class="MD_left_img" src="Resource/gr_1.png" alt="">
+        <span>我的客户</span>
+        <img class="MD_right_img" src="Resource/jt.png" alt="">
+    </div>
+</div>
+
+<div class="MD_bottom_div">
+    <div class="MD_bottom_inner_div">
+        <img class="MD_left_img" src="Resource/gr_1.png" alt="">
+        <span>我的客户</span>
+        <img class="MD_right_img" src="Resource/jt.png" alt="">
+    </div>
+</div>
+
+<div class="MD_bottom_div">
+    <div class="MD_bottom_inner_div">
+        <img class="MD_left_img" src="Resource/gr_1.png" alt="">
+        <span>我的客户</span>
+        <img class="MD_right_img" src="Resource/jt.png" alt="">
+    </div>
+</div>
+
+<div class="MD_bottom_div">
+    <div class="MD_bottom_inner_div">
+        <img class="MD_left_img" src="Resource/gr_1.png" alt="">
+        <span>我的客户</span>
+        <img class="MD_right_img" src="Resource/jt.png" alt="">
+    </div>
+</div>
+<div class="MD_bottom_div">
+    <div class="MD_bottom_inner_div">
+        <img class="MD_left_img" src="Resource/gr_1.png" alt="">
+        <span>我的客户</span>
+        <img class="MD_right_img" src="Resource/jt.png" alt="">
+    </div>
+</div>
+<div class="MD_bottom_div">
+    <div class="MD_bottom_inner_div">
+        <img class="MD_left_img" src="Resource/gr_1.png" alt="">
+        <span>我的客户</span>
+        <img class="MD_right_img" src="Resource/jt.png" alt="">
+    </div>
+</div>
+<div class="MD_bottom_div">
+    <div class="MD_bottom_inner_div">
+        <img class="MD_left_img" src="Resource/gr_1.png" alt="">
+        <span>我的客户</span>
+        <img class="MD_right_img" src="Resource/jt.png" alt="">
+    </div>
+</div>
+<div class="MD_bottom_div">
+    <div class="MD_bottom_inner_div">
+        <img class="MD_left_img" src="Resource/gr_1.png" alt="">
+        <span>我的客户</span>
+        <img class="MD_right_img" src="Resource/jt.png" alt="">
+    </div>
+</div>
+
+<footer>
+    <a href="1.1.html"><img src="Resource/nav10.png" alt=""><span >小滴服务</span></a>
+    <a href="1_2.1.html"><img src="Resource/nav20.png" alt=""><span>企业项目</span></a>
+    <a href="1_3.html"><img src="Resource/nav30.png" alt=""><span>服务流程</span></a>
+    <a href="1_4.html"><img src="Resource/nav40.png" alt=""><span>平台风采</span></a>
+    <a href="1_5.html"><img src="Resource/nav51.png" alt=""><span style="color: red">我的小滴</span></a>
+</footer>
+</body>
+</html>

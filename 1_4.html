@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="short icon" href="Resource/icon.png">
+    <link rel="stylesheet" href="style.css">
+    <title>郭星晨</title>
+    <style>
+        article{
+            margin:20px;
+        }
+        h3{
+            color:red;
+            font-size:18px;
+            padding-bottom: 10px;
+            border-bottom:1px solid #dddddd;
+        }
+        h4{
+            font-size:14px;
+        }
+        p{
+            font-size:12px;
+            text-indent:24px;
+            line-height:24px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <span>平台风采</span>
+</header>
+<section class="DS_second_section">
+    <img src="Resource/banner4.png" alt="">
+</section>
+<article>
+    <h3 id="title"></h3>
+    <h4 id="subTitle"></h4>
+    <p id="info"></p>
+</article>
+
+<script>
+
+    requestMethod('get','aboutus',function(returnStr){
+        var title_concent = document.getElementById("title");
+        var subTitle_concent=document.getElementById("subTitle");
+        var info_concent=document.getElementById("info");
+
+        title_concent.innerHTML=returnStr.title;
+        subTitle_concent.innerHTML= returnStr.subTitle;
+        info_concent.innerHTML=returnStr.info;
+
+    });
+
+
+
+
+
+
+    //1
+    var xhr = new XMLHttpRequest();
+    //2
+    xhr.open( 'get', 'https://mockapi.eolinker.com/2ZhGVxjacb39010e6753bd9c02ee803e6e3bfeab6e8007c/aboutus' );
+    xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+    //3
+    xhr.send();
+    //4
+    xhr.onreadystatechange=function () {
+
+        if(xhr.readyState==4 && xhr.status==200){
+
+            var res=JSON.parse(xhr.responseText);
+
+           var title_concent = document.getElementById("title");
+           var subTitle_concent=document.getElementById("subTitle");
+            var info_concent=document.getElementById("info");
+
+            title_concent.innerHTML=res.data.title;
+            subTitle_concent.innerHTML= res.data.subTitle;
+            info_concent.innerHTML=res.data.info;
+        }
+    }
+</script>
+<footer>
+
+    <a href="1.1.html"><img src="Resource/nav10.png" alt=""><span >小滴服务</span></a>
+    <a href="1_2.1.html"><img src="Resource/nav20.png" alt=""><span>企业项目</span></a>
+    <a href="1_3.html"><img src="Resource/nav30.png" alt=""><span>服务流程</span></a>
+    <a href="1_4.html"><img src="Resource/nav41.png" alt=""><span style="color: red">平台风采</span></a>
+    <a href="1_5.html"><img src="Resource/nav50.png" alt=""><span>我的小滴</span></a>
+</footer>
+</body>
+
+
+</html>
